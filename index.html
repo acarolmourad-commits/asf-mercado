@@ -60,5 +60,6 @@ function addXP(n){localStorage.setItem('asf_xp',XP()+n);document.getElementById(
 document.getElementById('xp').textContent=XP();
 const seed=[{t:'Vendo',i:'Softboard 7 pés — ótimo estado',v:'R$ 700'},{t:'Troco',i:'Wetsuit 3/2 tam M',v:'por long john P'}];const IC={Vendo:'💰',Troco:'🔄',Procuro:'🔍'};function render(){const l=JSON.parse(localStorage.getItem('asf_mercado')||'null')||seed;document.getElementById('lista').innerHTML=l.map(a=>`<p>${IC[a.t]} <b>${a.i}</b><br><small>${a.v}</small></p><hr>`).join('');}function pub(){const a={t:document.getElementById('t').value,i:document.getElementById('i').value,v:document.getElementById('v').value};if(!a.i)return;const l=JSON.parse(localStorage.getItem('asf_mercado')||'null')||seed;l.unshift(a);localStorage.setItem('asf_mercado',JSON.stringify(l));render();addXP(5);}render();
 </script>
+<script src="https://acarolmourad-commits.github.io/asf-app/asf-network.js" defer></script>
 </body>
 </html>
