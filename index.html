@@ -26,6 +26,12 @@ footer{text-align:center;padding:2rem;font-size:.8rem;color:#888}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"ASF Mercado","url":"https://acarolmourad-commits.github.io/asf-mercado/","applicationCategory":"SportsApplication","operatingSystem":"Web","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","name":"ASF — Associação Surf Feminino","url":"https://acarolmourad-commits.github.io/asf-app/"}}
 </script>
+<meta property="og:type" content="website">
+<meta property="og:title" content="ASF Mercado — ASF">
+<meta property="og:description" content="Troca e venda de equipamentos usados entre surfistas">
+<meta property="og:url" content="https://acarolmourad-commits.github.io/asf-mercado/">
+<meta property="og:image" content="https://acarolmourad-commits.github.io/asf-app/assets/images/asf-logo.png">
+<meta name="twitter:card" content="summary">
 </head>
 <body>
 <header><h1>🛒 ASF Mercado</h1><p>Troca e venda de equipamentos usados entre surfistas</p></header>
@@ -54,6 +60,5 @@ function addXP(n){localStorage.setItem('asf_xp',XP()+n);document.getElementById(
 document.getElementById('xp').textContent=XP();
 const seed=[{t:'Vendo',i:'Softboard 7 pés — ótimo estado',v:'R$ 700'},{t:'Troco',i:'Wetsuit 3/2 tam M',v:'por long john P'}];const IC={Vendo:'💰',Troco:'🔄',Procuro:'🔍'};function render(){const l=JSON.parse(localStorage.getItem('asf_mercado')||'null')||seed;document.getElementById('lista').innerHTML=l.map(a=>`<p>${IC[a.t]} <b>${a.i}</b><br><small>${a.v}</small></p><hr>`).join('');}function pub(){const a={t:document.getElementById('t').value,i:document.getElementById('i').value,v:document.getElementById('v').value};if(!a.i)return;const l=JSON.parse(localStorage.getItem('asf_mercado')||'null')||seed;l.unshift(a);localStorage.setItem('asf_mercado',JSON.stringify(l));render();addXP(5);}render();
 </script>
-<footer style="text-align:center;padding:18px 12px;font-size:12px;color:#567;background:transparent">ASF — Associação de Surf Feminino · <a href="https://acarolmourad-commits.github.io/asf-app/privacidade.html" style="color:#00A8CC">Privacidade</a> · <a href="https://acarolmourad-commits.github.io/asf-app/cookies.html" style="color:#00A8CC">Cookies</a> · <a href="https://acarolmourad-commits.github.io/asf-app/termos-de-uso.html" style="color:#00A8CC">Termos</a></footer>
 </body>
 </html>
